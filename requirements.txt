@@ -1,0 +1,4 @@
+flask>=3.0
+qrcode[pil]>=8.0
+gunicorn>=21.2
+python-dotenv>=1.0
