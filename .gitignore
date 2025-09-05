@@ -1,3 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.env
+app_qr.png
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
