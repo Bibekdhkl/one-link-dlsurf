@@ -7,7 +7,7 @@ app = Flask(__name__)
 ANDROID_URL = "https://play.google.com/store/apps/details?id=com.dlplatforms.dlsurfmobile"
 IOS_URL = "https://apps.apple.com/us/app/gumroad/id916819108"
 WEB_URL = "https://dl.surf/social"
-FALLBACK_URL = "https://youtube.com/yourvideo"
+FALLBACK_URL = "https://www.youtube.com/@dlsurfofficial"
 
 @app.route("/openapp")
 def open_app():
@@ -24,7 +24,7 @@ def open_app():
 
 # Function to generate QR code for the redirect URL
 def generate_qr():
-    url = "https://yourdomain.com/openapp"  # your hosted Flask endpoint
+    url = "https://dlsurf-qr.netlify.app/openapp"  # your hosted Flask endpoint
     qr = qrcode.QRCode(
         version=1,
         box_size=10,
