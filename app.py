@@ -3,6 +3,11 @@ from flask import Flask, request, redirect
 
 app = Flask(__name__)
 
+ANDROID_URL="https://play.google.com/store/apps/details?id=your.app.id"
+IOS_URL="https://apps.apple.com/app/id1234567890"
+WEB_URL="https://yourdomain.com/landing"
+FALLBACK_URL="https://www.youtube.com/@yourchannel"
+
 ANDROID_URL  = os.getenv("ANDROID_URL")
 IOS_URL      = os.getenv("IOS_URL")
 WEB_URL      = os.getenv("WEB_URL")
