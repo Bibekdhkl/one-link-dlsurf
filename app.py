@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 ANDROID_URL="https://play.google.com/store/apps/details?id=your.app.id"
 IOS_URL="https://apps.apple.com/app/id1234567890"
-WEB_URL="https://yourdomain.com/landing"
+WEB_URL="https://dl.surf/"
 FALLBACK_URL="https://www.youtube.com/@yourchannel"
 
-ANDROID_URL  = os.getenv("ANDROID_URL")
-IOS_URL      = os.getenv("IOS_URL")
-WEB_URL      = os.getenv("WEB_URL")
-FALLBACK_URL = os.getenv("FALLBACK_URL")
+# ANDROID_URL  = os.getenv("ANDROID_URL")
+# IOS_URL      = os.getenv("IOS_URL")
+# WEB_URL      = os.getenv("WEB_URL")
+# FALLBACK_URL = os.getenv("FALLBACK_URL")
 
 def detect_platform(ua: str) -> str:
     ua = (ua or "").lower()
@@ -23,7 +23,7 @@ def detect_platform(ua: str) -> str:
         return "web"
     return "other"
 
-@app.route("/openapp")
+@app.get("/openapp")
 def openapp():
     override = request.args.get("platform")
     if override in {"android", "ios", "web"}:
