@@ -6,7 +6,7 @@ app = Flask(__name__)
 ANDROID_URL="https://play.google.com/store/apps/details?id=your.app.id"
 IOS_URL="https://apps.apple.com/app/id1234567890"
 WEB_URL="https://dl.surf/"
-FALLBACK_URL="https://www.youtube.com/@yourchannel"
+FALLBACK_URL="https://www.youtube.com/@dlsurfofficial"
 
 # ANDROID_URL  = os.getenv("ANDROID_URL")
 # IOS_URL      = os.getenv("IOS_URL")
@@ -23,7 +23,7 @@ def detect_platform(ua: str) -> str:
         return "web"
     return "other"
 
-@app.get("/openapp")
+@app.get("/")
 def openapp():
     override = request.args.get("platform")
     if override in {"android", "ios", "web"}:
@@ -42,9 +42,9 @@ def openapp():
 
     return redirect(target, code=302)
 
-@app.get("/")
+@app.get("/health")
 def health():
-    return {"ok": True, "use": "/openapp"}
+    return {"ok": True}
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 2000))
