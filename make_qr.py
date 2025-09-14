@@ -1,6 +1,6 @@
 import qrcode
 
-REDIRECT_URL = "https://localhost/openapp"
+REDIRECT_URL = "https://qr.dl.surf/"
 
 img = qrcode.make(REDIRECT_URL)
 img.save("app_qr.png")

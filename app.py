@@ -3,9 +3,9 @@ from flask import Flask, request, redirect
 
 app = Flask(__name__)
 
-ANDROID_URL="https://play.google.com/store/apps/details?id=your.app.id"
-IOS_URL="https://apps.apple.com/app/id1234567890"
-WEB_URL="https://dl.surf/"
+ANDROID_URL="https://play.google.com/store/apps/details?id=com.dlplatforms.dlsurfmobile"
+IOS_URL="https://apps.apple.com/np/app/dlsurf-storage-monetization/id6751890136"
+WEB_URL="https://dl.surf"
 FALLBACK_URL="https://www.youtube.com/@dlsurfofficial"
 
 # ANDROID_URL  = os.getenv("ANDROID_URL")
