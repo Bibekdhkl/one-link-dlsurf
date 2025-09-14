@@ -47,5 +47,5 @@ def health():
     return {"ok": True, "use": "/openapp"}
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5000))
+    port = int(os.getenv("PORT", 2000))
     app.run(host="0.0.0.0", port=port)

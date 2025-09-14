@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port (if using Flask, default is 5000)
-EXPOSE 5000
+EXPOSE 2000
 
-# Start the app (update if using a different entrypoint)
+# Start the app on port 2000
 CMD ["python", "app.py"]
