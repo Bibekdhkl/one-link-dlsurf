@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Uncomment below if you want to mount code for live reload (dev only)
+    # volumes:
+    #   - .:/app
